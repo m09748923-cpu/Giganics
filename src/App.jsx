@@ -61,7 +61,7 @@ import TeacherAnswerKey from "./pages/TeacherAnswerKey";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Giganics">
 
       <Routes>
 
