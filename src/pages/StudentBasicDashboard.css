@@ -1,0 +1,16 @@
+.student-basic-dashboard {
+  min-height: 100vh;
+  background: #05070d;
+  color: white;
+  padding: 50px;
+}
+
+.student-basic-dashboard h1 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.student-basic-dashboard p {
+  color: #b9c8df;
+  font-size: 18px;
+}

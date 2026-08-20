@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Dashboard */
+.teacher-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #334155, transparent 35%),
+    radial-gradient(circle at bottom right, #1e293b, transparent 40%),
+    #0f172a;
+}
+
+/* Hamburger Menu */
+.menu-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+
+  background: rgba(30, 41, 59, 0.9);
+  color: white;
+
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  z-index: 2000;
+
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.menu-button:hover {
+  background: #2563eb;
+}
+
+/* Sidebar */
+.teacher-sidebar {
+  position: fixed;
+  left: -280px;
+  top: 0;
+  height: 100vh;
+  width: 250px;
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.teacher-sidebar.open {
+  left: 0;
+}
+
+.teacher-sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.teacher-sidebar p {
+  color: #cbd5e1;
+  margin-bottom: 25px;
+}
+
+.teacher-sidebar button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  background: transparent;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.teacher-sidebar button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  color: white;
+}
+
+.dashboard-content h1 {
+  margin-top: 0;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(12px);
+  color: white;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+/* Plans */
+.plan-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.plan {
+  width: 250px;
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(12px);
+  color: white;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.plan:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+.plan ul {
+  padding-left: 20px;
+}
+
+.plan button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.plan button:hover {
+  background: #1d4ed8;
+}

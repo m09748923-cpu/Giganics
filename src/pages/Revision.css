@@ -1,0 +1,158 @@
+.revision-page {
+  min-height: 100vh;
+  background: #05070d;
+  color: white;
+  padding: 35px;
+}
+
+.revision-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0d1729;
+  border: 1px solid #1f2d47;
+  color: #c6d4eb;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+.revision-back:hover {
+  background: #13213a;
+}
+
+.revision-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.revision-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  background: #0d1729;
+  border: 1px solid #1f2d47;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #7db4ff;
+}
+
+.revision-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.revision-header p {
+  margin: 6px 0 0;
+  color: #8fa1bd;
+}
+
+.revision-card {
+  max-width: 800px;
+  background: #0a101c;
+  border: 1px solid #1b2940;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.revision-card label {
+  display: block;
+  margin-bottom: 10px;
+  color: #c6d4eb;
+  font-size: 14px;
+}
+
+.revision-card input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #050a13;
+  border: 1px solid #263650;
+  border-radius: 10px;
+  padding: 14px;
+  color: white;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.revision-card input:focus {
+  border-color: #4d8fe8;
+}
+
+.revision-generate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: #1769e0;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 13px 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.revision-generate:hover {
+  background: #2879ed;
+}
+
+.revision-generate:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.revision-result {
+  max-width: 800px;
+  margin-top: 30px;
+  background: #0a101c;
+  border: 1px solid #1b2940;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.revision-result h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.revision-answer {
+  color: #d7e1f0;
+  line-height: 1.7;
+}
+
+.revision-answer h1,
+.revision-answer h2,
+.revision-answer h3 {
+  color: white;
+  margin-top: 28px;
+}
+
+.revision-answer strong {
+  color: #8fc1ff;
+}
+
+.revision-answer li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+  .revision-page {
+    padding: 20px;
+  }
+
+  .revision-header h1 {
+    font-size: 24px;
+  }
+
+  .revision-card,
+  .revision-result {
+    padding: 18px;
+  }
+}

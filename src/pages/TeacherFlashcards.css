@@ -1,0 +1,831 @@
+.teacher-flashcards-page {
+  min-height: 100vh;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(59, 130, 246, 0.12), transparent 28%),
+    radial-gradient(circle at 90% 100%, rgba(124, 58, 237, 0.10), transparent 30%),
+    #080d19;
+  color: #f8fafc;
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.teacher-flashcards-header {
+  max-width: 1320px;
+  margin: 0 auto 26px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.teacher-flashcards-back {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.72);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.teacher-flashcards-back:hover {
+  color: #fff;
+  border-color: rgba(96, 165, 250, 0.35);
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.teacher-flashcards-back span {
+  display: none;
+}
+
+.teacher-flashcards-title-area {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  flex: 1;
+}
+
+.teacher-flashcards-title-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.18),
+    rgba(124, 58, 237, 0.18)
+  );
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  color: #60a5fa;
+  font-size: 20px;
+}
+
+.teacher-flashcards-title-area h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.teacher-flashcards-title-area p {
+  margin: 3px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.teacher-flashcards-limit {
+  min-width: 95px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(96, 165, 250, 0.16);
+  background: rgba(30, 41, 59, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.teacher-flashcards-limit span {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.teacher-flashcards-limit strong {
+  color: #60a5fa;
+  font-size: 13px;
+}
+
+/* ================================
+   MAIN
+================================ */
+
+.teacher-flashcards-content {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 430px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+/* ================================
+   GENERATOR
+================================ */
+
+.teacher-flashcards-generator,
+.teacher-flashcards-workspace {
+  border: 1px solid rgba(148, 163, 184, 0.11);
+  border-radius: 20px;
+  background: rgba(12, 18, 32, 0.84);
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(18px);
+}
+
+.teacher-flashcards-generator {
+  padding: 24px;
+}
+
+.teacher-flashcards-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.teacher-flashcards-section-heading h2,
+.teacher-flashcards-workspace-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.teacher-flashcards-section-heading p,
+.teacher-flashcards-workspace-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.teacher-flashcards-remaining {
+  flex-shrink: 0;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.13);
+  color: #60a5fa;
+  font-size: 10px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+/* ================================
+   ALERTS
+================================ */
+
+.teacher-flashcards-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 11px 13px;
+  margin-bottom: 17px;
+  border-radius: 11px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.teacher-flashcards-alert svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.teacher-flashcards-alert.error {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.07);
+  border: 1px solid rgba(239, 68, 68, 0.14);
+}
+
+.teacher-flashcards-alert.success {
+  color: #86efac;
+  background: rgba(34, 197, 94, 0.07);
+  border: 1px solid rgba(34, 197, 94, 0.14);
+}
+
+/* ================================
+   FORM
+================================ */
+
+.teacher-flashcards-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.teacher-flashcards-field {
+  min-width: 0;
+}
+
+.teacher-flashcards-field.teacher-flashcards-wide {
+  grid-column: 1 / -1;
+}
+
+.teacher-flashcards-field label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 7px;
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.teacher-flashcards-field label svg {
+  color: #60a5fa;
+  font-size: 11px;
+}
+
+.teacher-flashcards-field input,
+.teacher-flashcards-field select {
+  width: 100%;
+  height: 43px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  background: rgba(7, 12, 23, 0.78);
+  color: #f8fafc;
+  font-size: 12px;
+  transition: 0.2s ease;
+}
+
+.teacher-flashcards-field input::placeholder {
+  color: #475569;
+}
+
+.teacher-flashcards-field input:focus,
+.teacher-flashcards-field select:focus {
+  border-color: rgba(96, 165, 250, 0.55);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.08);
+}
+
+.teacher-flashcards-field select {
+  cursor: pointer;
+}
+
+/* ================================
+   NUMBER CONTROL
+================================ */
+
+.teacher-flashcards-number-control {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  background: rgba(7, 12, 23, 0.78);
+  overflow: hidden;
+}
+
+.teacher-flashcards-number-control button {
+  width: 42px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.teacher-flashcards-number-control button:hover:not(:disabled) {
+  color: #fff;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.teacher-flashcards-number-control button:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.teacher-flashcards-number-control span {
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* ================================
+   ACTIONS
+================================ */
+
+.teacher-flashcards-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-top: 21px;
+}
+
+.teacher-flashcards-generate,
+.teacher-flashcards-reset,
+.teacher-flashcards-print {
+  height: 43px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.teacher-flashcards-generate {
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.16);
+}
+
+.teacher-flashcards-generate:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.25);
+}
+
+.teacher-flashcards-generate:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.teacher-flashcards-reset {
+  padding: 0 15px;
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  background: rgba(30, 41, 59, 0.55);
+  color: #94a3b8;
+}
+
+.teacher-flashcards-reset:hover:not(:disabled) {
+  color: #fff;
+  background: rgba(51, 65, 85, 0.7);
+}
+
+.teacher-flashcards-reset:disabled {
+  opacity: 0.4;
+}
+
+/* ================================
+   SPINNER
+================================ */
+
+.teacher-flashcards-spin {
+  animation: teacherFlashcardsSpin 0.8s linear infinite;
+}
+
+@keyframes teacherFlashcardsSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================================
+   WORKSPACE
+================================ */
+
+.teacher-flashcards-workspace {
+  padding: 24px;
+  min-height: 600px;
+}
+
+.teacher-flashcards-workspace-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.teacher-flashcards-print {
+  padding: 0 14px;
+  border: 1px solid rgba(96, 165, 250, 0.16);
+  background: rgba(59, 130, 246, 0.08);
+  color: #60a5fa;
+}
+
+.teacher-flashcards-print:hover {
+  background: rgba(59, 130, 246, 0.14);
+}
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.teacher-flashcards-empty {
+  min-height: 490px;
+  border: 1px dashed rgba(148, 163, 184, 0.14);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 35px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(59, 130, 246, 0.045),
+      transparent 55%
+    );
+}
+
+.teacher-flashcards-empty-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 19px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(96, 165, 250, 0.13);
+  color: #60a5fa;
+  font-size: 25px;
+}
+
+.teacher-flashcards-empty h3 {
+  margin: 0 0 7px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.teacher-flashcards-empty p {
+  max-width: 390px;
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* ================================
+   VIEWER
+================================ */
+
+.teacher-flashcards-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ================================
+   FLASHCARD
+================================ */
+
+.teacher-flashcard {
+  width: min(100%, 650px);
+  height: 365px;
+  perspective: 1200px;
+  cursor: pointer;
+  outline: none;
+}
+
+.teacher-flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.teacher-flashcard.is-flipped .teacher-flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.teacher-flashcard-front,
+.teacher-flashcard-back {
+  position: absolute;
+  inset: 0;
+  padding: 34px;
+  border-radius: 22px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.teacher-flashcard-front {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(59, 130, 246, 0.13),
+      transparent 35%
+    ),
+    linear-gradient(145deg, #111a2d, #0b1220);
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25);
+}
+
+.teacher-flashcard-back {
+  transform: rotateY(180deg);
+  background:
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(124, 58, 237, 0.13),
+      transparent 35%
+    ),
+    linear-gradient(145deg, #17162b, #0b1220);
+  border: 1px solid rgba(167, 139, 250, 0.18);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25);
+}
+
+.teacher-flashcard-front::before,
+.teacher-flashcard-back::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  right: -90px;
+  top: -90px;
+  border: 1px solid rgba(255, 255, 255, 0.035);
+}
+
+.teacher-flashcard-badge {
+  align-self: flex-start;
+  padding: 6px 10px;
+  border-radius: 7px;
+  background: rgba(96, 165, 250, 0.09);
+  border: 1px solid rgba(96, 165, 250, 0.13);
+  color: #60a5fa;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 1px;
+}
+
+.teacher-flashcard-back .teacher-flashcard-badge {
+  background: rgba(167, 139, 250, 0.09);
+  border-color: rgba(167, 139, 250, 0.13);
+  color: #a78bfa;
+}
+
+.teacher-flashcard-content {
+  position: relative;
+  z-index: 1;
+  margin: 28px 0;
+  color: #f8fafc;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.teacher-flashcard-back .teacher-flashcard-content {
+  color: #e2e8f0;
+  font-size: 18px;
+  font-weight: 550;
+}
+
+.teacher-flashcard-hint {
+  color: #475569;
+  font-size: 10px;
+  font-weight: 650;
+  text-align: center;
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.teacher-flashcards-navigation {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.teacher-flashcards-navigation > button {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  background: rgba(30, 41, 59, 0.7);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.teacher-flashcards-navigation > button:hover {
+  color: #fff;
+  background: rgba(51, 65, 85, 0.85);
+  border-color: rgba(96, 165, 250, 0.25);
+}
+
+.teacher-flashcards-counter {
+  min-width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.teacher-flashcards-counter strong {
+  color: #60a5fa;
+  font-size: 14px;
+}
+
+/* ================================
+   MINI CARDS
+================================ */
+
+.teacher-flashcards-card-list {
+  width: 100%;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+}
+
+.teacher-flashcards-mini-card {
+  min-width: 0;
+  padding: 11px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  background: rgba(15, 23, 42, 0.62);
+  color: #94a3b8;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.teacher-flashcards-mini-card:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+.teacher-flashcards-mini-card.active {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+.teacher-flashcards-mini-card span {
+  display: block;
+  margin-bottom: 5px;
+  color: #64748b;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.teacher-flashcards-mini-card.active span {
+  color: #60a5fa;
+}
+
+.teacher-flashcards-mini-card strong {
+  display: block;
+  overflow: hidden;
+  color: #cbd5e1;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1050px) {
+  .teacher-flashcards-content {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-flashcards-workspace {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .teacher-flashcards-page {
+    padding: 18px 12px;
+  }
+
+  .teacher-flashcards-header {
+    gap: 10px;
+  }
+
+  .teacher-flashcards-title-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .teacher-flashcards-title-area h1 {
+    font-size: 20px;
+  }
+
+  .teacher-flashcards-limit {
+    min-width: auto;
+  }
+
+  .teacher-flashcards-limit span {
+    display: none;
+  }
+
+  .teacher-flashcards-generator,
+  .teacher-flashcards-workspace {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .teacher-flashcards-form {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-flashcards-field.teacher-flashcards-wide {
+    grid-column: auto;
+  }
+
+  .teacher-flashcards-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-flashcards-reset {
+    width: 100%;
+  }
+
+  .teacher-flashcards-workspace-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .teacher-flashcard {
+    height: 330px;
+  }
+
+  .teacher-flashcard-front,
+  .teacher-flashcard-back {
+    padding: 25px;
+  }
+
+  .teacher-flashcard-content {
+    font-size: 19px;
+  }
+
+  .teacher-flashcard-back .teacher-flashcard-content {
+    font-size: 16px;
+  }
+
+  .teacher-flashcards-card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 430px) {
+  .teacher-flashcards-title-area p {
+    display: none;
+  }
+
+  .teacher-flashcards-section-heading {
+    flex-direction: column;
+  }
+
+  .teacher-flashcards-remaining {
+    width: fit-content;
+  }
+
+  .teacher-flashcard {
+    height: 300px;
+  }
+
+  .teacher-flashcard-content {
+    font-size: 17px;
+  }
+
+  .teacher-flashcard-back .teacher-flashcard-content {
+    font-size: 15px;
+  }
+
+  .teacher-flashcards-mini-card {
+    padding: 9px;
+  }
+}
+.teacher-flashcards-print.locked {
+  color: #64748b;
+  background: rgba(30, 41, 59, 0.45);
+  border-color: rgba(148, 163, 184, 0.1);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.teacher-flashcards-print.locked:hover {
+  background: rgba(30, 41, 59, 0.45);
+  color: #64748b;
+}

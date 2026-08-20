@@ -1,0 +1,415 @@
+.pdf-download-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px 40px 60px;
+  background: linear-gradient(135deg, #07111f, #0b1d33, #06101d);
+  color: #ffffff;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.pdf-download-header {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto 35px;
+}
+
+.pdf-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  color: #9fb6d0;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.pdf-back-btn:hover {
+  color: #ffffff;
+}
+
+.pdf-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  color: #78aaff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.pdf-download-header h1 {
+  max-width: 800px;
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+.pdf-download-header h1 span {
+  display: block;
+  color: #5d9cff;
+}
+
+.pdf-download-header p {
+  max-width: 700px;
+  margin: 15px 0 0;
+  color: #9fb2c8;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.pdf-info-card {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 35px;
+  box-sizing: border-box;
+
+  background: rgba(13, 28, 47, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(18px);
+}
+
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.pdf-card-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding-bottom: 28px;
+  margin-bottom: 5px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.pdf-card-title h2 {
+  margin: 0 0 7px;
+  font-size: 23px;
+}
+
+.pdf-card-title p {
+  margin: 0;
+  color: #8499b0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pdf-card-title > svg {
+  color: #4ade80;
+  font-size: 25px;
+  margin-top: 3px;
+}
+
+
+/* =========================
+   STEPS
+========================= */
+
+.pdf-step {
+  position: relative;
+
+  display: flex;
+  gap: 22px;
+
+  padding: 27px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pdf-step::before {
+  content: "";
+
+  position: absolute;
+
+  left: 20px;
+  top: 76px;
+  bottom: -27px;
+
+  width: 1px;
+
+  background: rgba(93, 156, 255, 0.22);
+}
+
+.pdf-step.last-step {
+  border-bottom: none;
+}
+
+.pdf-step.last-step::before {
+  display: none;
+}
+
+
+/* STEP NUMBER */
+
+.pdf-step-number {
+  position: relative;
+  z-index: 2;
+
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(37, 99, 235, 0.16);
+  border: 1px solid rgba(93, 156, 255, 0.28);
+
+  color: #73a7ff;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* STEP CONTENT */
+
+.pdf-step-content {
+  flex: 1;
+  padding-top: 1px;
+}
+
+.pdf-step-content h3 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.pdf-step-content p {
+  max-width: 750px;
+
+  margin: 0;
+
+  color: #9aacc0;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.pdf-step-content strong {
+  color: #ffffff;
+}
+
+
+/* =========================
+   TOOLS
+========================= */
+
+.pdf-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-top: 16px;
+}
+
+.pdf-tools span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 11px;
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  color: #c6d4e3;
+
+  font-size: 12px;
+}
+
+.pdf-tools span svg {
+  color: #669fff;
+  font-size: 13px;
+}
+
+
+/* =========================
+   MY FILES
+========================= */
+
+.pdf-my-files {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  margin-top: 30px;
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background: rgba(37, 99, 235, 0.07);
+  border: 1px solid rgba(93, 156, 255, 0.14);
+}
+
+.pdf-my-files-icon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(37, 99, 235, 0.15);
+
+  color: #6ea8ff;
+  font-size: 19px;
+}
+
+.pdf-my-files h2 {
+  margin: 0 0 6px;
+
+  font-size: 17px;
+}
+
+.pdf-my-files p {
+  margin: 0;
+
+  color: #91a5bb;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.pdf-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 22px;
+}
+
+.pdf-files-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.pdf-files-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.pdf-files-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+  .pdf-download-page {
+    padding: 25px 18px 45px;
+  }
+
+  .pdf-download-header h1 {
+    font-size: 32px;
+  }
+
+  .pdf-download-header p {
+    font-size: 14px;
+  }
+
+  .pdf-info-card {
+    padding: 25px 20px;
+    border-radius: 18px;
+  }
+
+  .pdf-card-title h2 {
+    font-size: 20px;
+  }
+
+  .pdf-step {
+    gap: 15px;
+  }
+
+  .pdf-step-number {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+
+  .pdf-step::before {
+    left: 18px;
+  }
+
+  .pdf-tools {
+    gap: 7px;
+  }
+
+  .pdf-my-files {
+    align-items: flex-start;
+  }
+
+  .pdf-actions {
+    justify-content: stretch;
+  }
+
+  .pdf-files-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,887 @@
+* {
+  box-sizing: border-box;
+}
+
+.teacher-ai-notes-page {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(92, 72, 180, 0.16),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(0, 170, 255, 0.08),
+      transparent 30%
+    ),
+    #060812;
+
+  color: #f5f7ff;
+  font-family: Arial, sans-serif;
+  padding-bottom: 50px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.teacher-ai-header {
+  width: 100%;
+  min-height: 82px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  padding: 0 42px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(9, 11, 22, 0.86);
+  backdrop-filter: blur(18px);
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.teacher-back-button {
+  justify-self: start;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 11px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: #dfe4f4;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.teacher-back-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(-2px);
+}
+
+.teacher-ai-header-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.teacher-ai-header-title > svg {
+  font-size: 24px;
+  color: #8c7cff;
+}
+
+.teacher-ai-header-title h1 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.teacher-ai-header-title p {
+  margin: 4px 0 0;
+
+  color: #858ca1;
+  font-size: 12px;
+}
+
+.teacher-plan-badge {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.teacher-plan-badge.free {
+  color: #d8dced;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.teacher-plan-badge.premium {
+  color: #ffe9a6;
+  background: rgba(255, 190, 50, 0.09);
+  border: 1px solid rgba(255, 190, 50, 0.2);
+}
+
+/* =========================================
+   MAIN
+========================================= */
+
+.teacher-ai-main {
+  width: min(1500px, calc(100% - 80px));
+  margin: 30px auto 0;
+}
+
+/* =========================================
+   GENERATOR
+========================================= */
+
+.teacher-generator-panel {
+  width: 100%;
+
+  padding: 28px 30px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(25, 29, 49, 0.94),
+      rgba(13, 16, 30, 0.94)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.generator-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.generator-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: rgba(124, 104, 255, 0.13);
+  border: 1px solid rgba(124, 104, 255, 0.2);
+
+  color: #9688ff;
+  font-size: 19px;
+}
+
+.generator-heading h2 {
+  margin: 0;
+
+  font-size: 18px;
+}
+
+.generator-heading p {
+  margin: 5px 0 0;
+
+  color: #858ca1;
+  font-size: 13px;
+}
+
+.generator-limit {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  border-radius: 9px;
+
+  color: #aeb5c9;
+  background: rgba(255, 255, 255, 0.04);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.generator-limit svg {
+  color: #ffd36a;
+}
+
+/* =========================================
+   FIELDS
+========================================= */
+
+.generator-fields {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    0.8fr
+    1.6fr
+    0.9fr;
+
+  gap: 16px;
+}
+
+.teacher-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.teacher-field label {
+  color: #b8bfd2;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.teacher-field input,
+.teacher-field select {
+  width: 100%;
+  height: 47px;
+
+  padding: 0 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  background: rgba(4, 7, 15, 0.68);
+
+  color: #f2f4fb;
+
+  outline: none;
+
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+.teacher-field input::placeholder {
+  color: #656c7e;
+}
+
+.teacher-field input:focus,
+.teacher-field select:focus {
+  border-color: rgba(133, 116, 255, 0.65);
+
+  box-shadow:
+    0 0 0 3px rgba(133, 116, 255, 0.08);
+}
+
+.teacher-field select option {
+  background: #10131f;
+  color: #fff;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.teacher-ai-error {
+  margin-top: 17px;
+
+  padding: 12px 14px;
+
+  border-radius: 9px;
+
+  background: rgba(220, 65, 65, 0.08);
+  border: 1px solid rgba(220, 65, 65, 0.2);
+
+  color: #ff9b9b;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.generator-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.generate-notes-button {
+  height: 45px;
+
+  padding: 0 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #7868ff;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  box-shadow:
+    0 10px 25px rgba(120, 104, 255, 0.18);
+}
+
+.generate-notes-button:hover:not(:disabled) {
+  background: #887aff;
+  transform: translateY(-1px);
+}
+
+.generate-notes-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.reset-notes-button {
+  height: 45px;
+
+  padding: 0 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: #aeb5c8;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.reset-notes-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.reset-notes-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   WORKSPACE
+========================================= */
+
+.teacher-notes-workspace {
+  width: 100%;
+
+  min-height: 680px;
+
+  margin-top: 24px;
+
+  border-radius: 18px;
+
+  background: #0c0f1b;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.28);
+}
+
+.workspace-header {
+  height: 76px;
+
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.workspace-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.workspace-title-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: rgba(124, 104, 255, 0.1);
+
+  color: #9183ff;
+}
+
+.workspace-title h2 {
+  margin: 0;
+
+  font-size: 16px;
+}
+
+.workspace-title p {
+  margin: 4px 0 0;
+
+  color: #737b91;
+  font-size: 12px;
+}
+
+.workspace-actions {
+  display: flex;
+  align-items: center;
+}
+
+.workspace-download {
+  height: 40px;
+
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: #d8dced;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.workspace-download:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.workspace-download:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   WORKSPACE CONTENT
+========================================= */
+
+.notes-workspace-content {
+  min-height: 604px;
+
+  padding: 38px 45px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.008),
+      rgba(255, 255, 255, 0)
+    );
+}
+
+.empty-notes-state,
+.generating-state {
+  min-height: 520px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.empty-notes-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 18px;
+
+  background: rgba(124, 104, 255, 0.08);
+
+  border: 1px solid rgba(124, 104, 255, 0.13);
+
+  color: #7164d8;
+
+  font-size: 27px;
+}
+
+.empty-notes-state h3,
+.generating-state h3 {
+  margin: 0;
+
+  font-size: 18px;
+}
+
+.empty-notes-state p,
+.generating-state p {
+  max-width: 450px;
+
+  margin: 10px 0 0;
+
+  color: #727a90;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   GENERATED NOTES
+========================================= */
+
+.generated-notes {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  color: #e8ebf5;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.generated-notes h1 {
+  margin-top: 0;
+  margin-bottom: 22px;
+
+  color: #ffffff;
+
+  font-size: 28px;
+  line-height: 1.3;
+}
+
+.generated-notes h2 {
+  margin-top: 30px;
+  margin-bottom: 12px;
+
+  color: #f7f8ff;
+
+  font-size: 21px;
+}
+
+.generated-notes h3 {
+  margin-top: 24px;
+  margin-bottom: 9px;
+
+  color: #e8eaff;
+
+  font-size: 17px;
+}
+
+.generated-notes p {
+  margin: 10px 0;
+
+  color: #c6ccdc;
+}
+
+.generated-notes ul,
+.generated-notes ol {
+  padding-left: 25px;
+
+  color: #c6ccdc;
+}
+
+.generated-notes li {
+  margin: 7px 0;
+}
+
+.generated-notes strong {
+  color: #ffffff;
+}
+
+.generated-notes code {
+  padding: 3px 6px;
+
+  border-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  color: #b8adff;
+}
+
+.generated-notes blockquote {
+  margin: 18px 0;
+
+  padding: 12px 18px;
+
+  border-left: 3px solid #7868ff;
+
+  background: rgba(120, 104, 255, 0.06);
+
+  color: #b9bfd0;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.loading-spinner,
+.large-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.12);
+
+  border-top-color: #8a7cff;
+
+  border-radius: 50%;
+
+  animation: teacherSpin 0.8s linear infinite;
+}
+
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+}
+
+.large-spinner {
+  width: 46px;
+  height: 46px;
+
+  margin-bottom: 22px;
+}
+
+@keyframes teacherSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   UPGRADE CARD
+========================================= */
+
+.teacher-upgrade-card {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 18px 21px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(255, 193, 62, 0.055),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border: 1px solid rgba(255, 193, 62, 0.12);
+}
+
+.upgrade-lock {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: rgba(255, 193, 62, 0.08);
+
+  color: #e8b94e;
+}
+
+.upgrade-content {
+  flex: 1;
+}
+
+.upgrade-content h3 {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+.upgrade-content p {
+  margin: 5px 0 0;
+
+  color: #858ca0;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.upgrade-button {
+  height: 40px;
+
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid rgba(255, 193, 62, 0.2);
+
+  border-radius: 9px;
+
+  background: rgba(255, 193, 62, 0.08);
+
+  color: #f3ca68;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.upgrade-button:hover {
+  background: rgba(255, 193, 62, 0.13);
+}
+
+/* =========================================
+   PC / LAPTOP
+========================================= */
+
+@media (max-width: 1100px) {
+  .teacher-ai-main {
+    width: calc(100% - 40px);
+  }
+
+  .generator-fields {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .topic-field {
+    grid-column: span 2;
+  }
+}
+
+/* =========================================
+   SMALL SCREEN
+========================================= */
+
+@media (max-width: 700px) {
+  .teacher-ai-header {
+    padding: 0 16px;
+
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .teacher-ai-header-title p {
+    display: none;
+  }
+
+  .teacher-ai-header-title h1 {
+    font-size: 15px;
+  }
+
+  .teacher-back-button span {
+    display: none;
+  }
+
+  .teacher-plan-badge span {
+    display: none;
+  }
+
+  .teacher-ai-main {
+    width: calc(100% - 24px);
+    margin-top: 15px;
+  }
+
+  .teacher-generator-panel {
+    padding: 20px;
+  }
+
+  .generator-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-field {
+    grid-column: span 1;
+  }
+
+  .generator-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .generator-limit {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .notes-workspace-content {
+    padding: 25px 20px;
+  }
+
+  .workspace-header {
+    padding: 0 15px;
+  }
+
+  .workspace-download {
+    padding: 0 11px;
+  }
+
+  .workspace-download {
+    font-size: 0;
+  }
+
+  .workspace-download svg {
+    font-size: 14px;
+  }
+
+  .teacher-upgrade-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .upgrade-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

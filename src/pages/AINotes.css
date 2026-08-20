@@ -1,0 +1,211 @@
+.ai-notes-page {
+  min-height: 100vh;
+  background: #05070d;
+  color: white;
+  padding: 35px;
+}
+
+.ai-notes-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0d1729;
+  border: 1px solid #1f2d47;
+  color: #c6d4eb;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ai-notes-back:hover {
+  color: #4da3ff;
+  border-color: #4da3ff;
+}
+
+.ai-notes-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 45px 0 30px;
+}
+
+.ai-notes-header > svg {
+  font-size: 45px;
+  color: #4da3ff;
+}
+
+.ai-notes-header h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.ai-notes-header p {
+  color: #94a3b8;
+}
+
+.ai-notes-card {
+  max-width: 800px;
+  background: #0d1729;
+  border: 1px solid #223250;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.ai-notes-card label {
+  display: block;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.ai-notes-card textarea {
+  width: 100%;
+  min-height: 180px;
+  resize: vertical;
+  background: #080d18;
+  border: 1px solid #223250;
+  border-radius: 14px;
+  padding: 15px;
+  color: white;
+  outline: none;
+  font-size: 15px;
+}
+
+.ai-notes-card textarea:focus {
+  border-color: #4da3ff;
+  box-shadow: 0 0 0 4px rgba(77, 163, 255, 0.15);
+}
+
+.generate-notes-btn {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #4da3ff, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.generate-notes-btn:hover {
+  transform: translateY(-2px);
+}
+.generated-notes {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #223250;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+.generated-notes h2 {
+  font-size: 26px;
+  margin: 0 0 25px;
+  color: white;
+}
+
+.generated-notes h1,
+.generated-notes h2,
+.generated-notes h3,
+.generated-notes h4 {
+  line-height: 1.4;
+  margin-top: 28px;
+  margin-bottom: 14px;
+}
+
+.generated-notes h1 {
+  font-size: 30px;
+}
+
+.generated-notes h2 {
+  font-size: 26px;
+}
+
+.generated-notes h3 {
+  font-size: 22px;
+}
+
+.generated-notes p {
+  margin: 12px 0;
+  color: #dbe5f5;
+}
+
+.generated-notes ul,
+.generated-notes ol {
+  margin: 12px 0;
+  padding-left: 28px;
+}
+
+.generated-notes li {
+  margin: 7px 0;
+  color: #dbe5f5;
+}
+
+.generated-notes strong {
+  color: white;
+}
+
+.generated-notes em {
+  color: #c6d4eb;
+}
+
+.generated-notes hr {
+  border: none;
+  border-top: 1px solid #223250;
+  margin: 25px 0;
+}
+/* =========================
+   DOWNLOAD PDF BUTTON
+========================= */
+
+.download-pdf-btn {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: linear-gradient(135deg, #2563eb, #4da3ff);
+  color: white;
+
+  border: 1px solid rgba(77, 163, 255, 0.35);
+  border-radius: 12px;
+
+  padding: 12px 22px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.download-pdf-btn svg {
+  font-size: 16px;
+}
+
+.download-pdf-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(37, 99, 235, 0.35);
+
+  border-color: #4da3ff;
+}
+
+.download-pdf-btn:active {
+  transform: translateY(0);
+}
+
+.download-pdf-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}

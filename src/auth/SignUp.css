@@ -1,0 +1,451 @@
+/* ===========================
+   SIGN UP PAGE
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.signup-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #05070d, #0d1729);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===========================
+   BACKGROUND GLOW
+=========================== */
+
+.signup-bg::before,
+.signup-bg::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+.signup-bg::before {
+  width: 350px;
+  height: 350px;
+  background: #2563eb;
+  top: -100px;
+  left: -100px;
+  opacity: 0.25;
+}
+
+.signup-bg::after {
+  width: 350px;
+  height: 350px;
+  background: #06b6d4;
+  bottom: -120px;
+  right: -120px;
+  opacity: 0.20;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.signup-card {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 40px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.signup-logo{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.signup-logo h1{
+  color:#fff;
+  font-size:38px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.signup-logo p{
+  color:#94a3b8;
+  margin-top:8px;
+  font-size:15px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.signup-form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+.input-group{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  background:#111827;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:14px;
+
+  padding:15px 18px;
+
+  transition:.3s;
+}
+
+.input-group:focus-within{
+  border-color:#3b82f6;
+  box-shadow:0 0 0 4px rgba(59,130,246,.15);
+}
+
+.input-icon{
+  color:#60a5fa;
+  font-size:18px;
+}
+
+.input-group input{
+  flex:1;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:#fff;
+  font-size:15px;
+}
+
+.input-group input::placeholder{
+  color:#94a3b8;
+}
+
+.eye-btn{
+  background:none;
+  border:none;
+  cursor:pointer;
+  color:#94a3b8;
+  font-size:18px;
+}
+
+/* ===========================
+   ROLE
+=========================== */
+
+.role-section h3{
+  color:#fff;
+  margin-bottom:14px;
+  font-size:17px;
+}
+
+.role-container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.role-card{
+  position: relative;
+  background:#111827;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+
+  padding:18px;
+
+  min-height:180px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
+  cursor:pointer;
+  transition:.3s;
+}
+
+.role-card:hover{
+  transform:translateY(-4px);
+  border-color:#3b82f6;
+}
+
+.role-card.active{
+  border:2px solid #3b82f6;
+  box-shadow:0 0 20px rgba(59,130,246,.30);
+}
+
+.role-icon{
+  font-size:34px;
+  color:#60a5fa;
+  margin-bottom:12px;
+}
+
+.role-card h4{
+  color:white;
+  margin-bottom:8px;
+}
+
+.role-card p{
+  color:#94a3b8;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.check-icon{
+  position:absolute;
+  top:15px;
+  right:15px;
+  color:#22c55e;
+  font-size:20px;
+}
+
+/* ===========================
+   TERMS
+=========================== */
+
+.terms{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#cbd5e1;
+  font-size:14px;
+}
+
+.terms input{
+  accent-color:#3b82f6;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.signup-btn{
+  border:none;
+  border-radius:14px;
+  padding:16px;
+
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+  color:white;
+  font-size:16px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.signup-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 15px 35px rgba(37,99,235,.35);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.signin-link{
+  text-align:center;
+  color:#94a3b8;
+  margin-top:10px;
+}
+
+.signin-link span{
+  color:#60a5fa;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.signin-link span:hover{
+  color:white;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:600px){
+
+  .signup-card{
+    padding:28px 22px;
+  }
+
+  .role-container{
+    grid-template-columns:1fr;
+  }
+
+  .signup-logo h1{
+    font-size:30px;
+  }
+
+}/* ===========================
+   GOOGLE BUTTON
+=========================== */
+
+.google-btn {
+  width: 100%;
+  height: 55px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.google-btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.google-btn svg {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.divider span {
+  margin: 0 15px;
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* ===========================
+   SIGN IN LINK
+=========================== */
+
+.signin-link {
+  text-align: center;
+  margin-top: 22px;
+  color: rgba(255,255,255,0.75);
+}
+
+.signin-link a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 6px;
+  transition: 0.3s;
+}
+
+.signin-link a:hover {
+  color: #60a5fa;
+}/* ===========================
+   BACK BUTTON
+=========================== */
+
+.back-btn {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+
+  color: #fff;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  z-index: 9999;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateX(-4px);
+}/* ===========================
+   PASSWORD STRENGTH
+=========================== */
+
+.password-strength {
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
+
+.strength-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.strength-bar span {
+  display: block;
+  width: 30%;
+  height: 100%;
+  background: #ef4444;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.password-strength p {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.password-strength strong {
+  color: #ef4444;
+}

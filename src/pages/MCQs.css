@@ -1,0 +1,132 @@
+.mcqs-page {
+  min-height: 100vh;
+  background: #05070d;
+  color: white;
+  padding: 35px;
+}
+
+.mcqs-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0d1729;
+  border: 1px solid #1f2d47;
+  color: #c6d4eb;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.mcqs-back:hover {
+  background: #13213a;
+}
+
+.mcqs-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+
+.mcqs-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  background: #0d1729;
+  border: 1px solid #1f2d47;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7da7ff;
+  font-size: 23px;
+}
+
+.mcqs-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.mcqs-header p {
+  margin: 6px 0 0;
+  color: #8493aa;
+  font-size: 14px;
+}
+
+.mcqs-card {
+  max-width: 850px;
+  background: #0a101c;
+  border: 1px solid #1b2940;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.mcqs-card label {
+  display: block;
+  margin-bottom: 12px;
+  color: #d8e2f2;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.mcqs-card input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #070c15;
+  border: 1px solid #1b2940;
+  border-radius: 12px;
+  color: white;
+  padding: 14px 15px;
+  font-size: 15px;
+  outline: none;
+  font-family: inherit;
+}
+
+.mcqs-card input:focus {
+  border-color: #31568f;
+}
+
+.mcqs-card input::placeholder {
+  color: #59677c;
+}
+
+.mcqs-generate {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #315da8;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mcqs-generate:hover {
+  background: #3b6dc0;
+}
+
+.mcqs-result {
+  max-width: 850px;
+  margin-top: 25px;
+  background: #0a101c;
+  border: 1px solid #1b2940;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.mcqs-result h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.mcqs-result div {
+  color: #c6d4eb;
+  line-height: 1.7;
+}

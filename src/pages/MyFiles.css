@@ -1,0 +1,1043 @@
+.myfiles-page {
+  padding: 40px;
+  color: #fff;
+  min-height: 100vh;
+  background: #05070d;
+}
+
+/* HEADER */
+
+.myfiles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.myfiles-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 9px 14px;
+  background: #0b101c;
+  color: #b8c5db;
+  border: 1px solid #182238;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.myfiles-back-btn:hover {
+  color: #fff;
+  background: #111a2a;
+  border-color: #34466a;
+}
+
+.myfiles-page h1 {
+  font-size: 36px;
+  margin: 0 0 10px;
+}
+
+.myfiles-page p {
+  color: #8f9bb3;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* TOOLS */
+
+.myfiles-tools {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.myfiles-search {
+  flex: 1;
+  max-width: 600px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  background: #0b101c;
+  border: 1px solid #182238;
+  border-radius: 12px;
+}
+
+.myfiles-search svg {
+  color: #71809b;
+}
+
+.myfiles-search input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+}
+
+.myfiles-search input::placeholder {
+  color: #66728a;
+}
+
+.myfiles-filter {
+  height: 48px;
+  padding: 0 16px;
+  background: #0b101c;
+  color: white;
+  border: 1px solid #182238;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* FILE GRID */
+
+.myfiles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* FILE CARD */
+
+.file-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(
+    145deg,
+    #0c1321,
+    #080d17
+  );
+  border: 1px solid #182238;
+  border-radius: 16px;
+  transition: 0.25s ease;
+}
+
+.file-card:hover {
+  transform: translateY(-3px);
+  border-color: #34466a;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* FILE ICON */
+
+.file-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+.file-icon.notes {
+  background: rgba(109, 93, 252, 0.15);
+  color: #8b7fff;
+}
+
+.file-icon.mcqs {
+  background: rgba(45, 156, 219, 0.15);
+  color: #4da9e8;
+}
+
+.file-icon.homework {
+  background: rgba(46, 204, 113, 0.15);
+  color: #45d985;
+}
+
+.file-icon.flashcards {
+  background: rgba(241, 196, 15, 0.15);
+  color: #f1c40f;
+}
+
+/* FILE INFO */
+
+.file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-info h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.file-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #71809b;
+}
+
+/* ACTIONS */
+
+.file-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.file-actions button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111a2a;
+  color: #8f9bb3;
+  border: 1px solid #1d2a42;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.file-actions button:hover {
+  color: white;
+  background: #18243a;
+}
+
+.file-actions .delete-btn:hover {
+  color: #ff5c5c;
+  border-color: #5a2525;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .myfiles-page {
+    padding: 25px;
+  }
+
+  .myfiles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .myfiles-tools {
+    flex-direction: column;
+  }
+
+  .myfiles-search {
+    max-width: none;
+  }
+}
+/* OPEN FILE VIEW */
+
+.myfiles-file-view {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.myfiles-file-view-card {
+  width: 90%;
+  max-width: 900px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background: #0b101c;
+  border: 1px solid #182238;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.myfiles-file-view-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #182238;
+}
+
+.myfiles-file-view-header h2 {
+  margin: 0 0 5px;
+  color: #fff;
+  font-size: 21px;
+}
+
+.myfiles-file-view-header p {
+  color: #71809b;
+  font-size: 13px;
+}
+
+.myfiles-file-view-header button {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111a2a;
+  color: #8f9bb3;
+  border: 1px solid #1d2a42;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.myfiles-file-view-header button:hover {
+  color: #fff;
+  background: #18243a;
+}
+
+.myfiles-file-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 25px;
+}
+
+.myfiles-file-content pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #dce4f2;
+}
+
+.myfiles-file-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 24px;
+  border-top: 1px solid #182238;
+}
+
+.myfiles-file-footer button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #111a2a;
+  color: #b8c5db;
+  border: 1px solid #1d2a42;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.myfiles-file-footer button:hover {
+  color: #fff;
+  background: #18243a;
+}
+/* =========================================================
+   TEACHER PREMIUM MY FILES SIDEBAR
+========================================================= */
+
+.myfiles-sidebar-trigger {
+  position: fixed;
+
+  left: 0;
+  top: 50%;
+
+  width: 18px;
+  height: 100px;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1100;
+
+  cursor: pointer;
+}
+
+.myfiles-sidebar-hint {
+  width: 5px;
+  height: 55px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  transition: 0.25s ease;
+}
+
+.myfiles-sidebar-hint span {
+  width: 2px;
+  height: 2px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.myfiles-sidebar-trigger:hover
+.myfiles-sidebar-hint {
+  width: 8px;
+  height: 70px;
+
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.myfiles-sidebar {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  width: 270px;
+  height: 100vh;
+
+  box-sizing: border-box;
+
+  padding: 28px 16px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 20, 20, 0.98),
+      rgba(8, 8, 8, 0.99)
+    );
+
+  border-right:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    15px 0 50px rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  transform: translateX(-100%);
+
+  transition:
+    transform 0.35s ease;
+
+  z-index: 1200;
+
+  overflow-y: auto;
+}
+
+.myfiles-sidebar.myfiles-sidebar-open {
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.myfiles-sidebar-close {
+  position: absolute;
+
+  top: 18px;
+  right: 16px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  color: #aaa;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.myfiles-sidebar-close:hover {
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  color: #fff;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.myfiles-premium-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin:
+    5px 35px 35px 5px;
+
+  cursor: pointer;
+}
+
+.myfiles-logo-orb {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff,
+      #a6a6a6
+    );
+
+  color: #050505;
+
+  font-size: 18px;
+}
+
+.myfiles-premium-logo h2 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 22px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.myfiles-sidebar ul {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.myfiles-sidebar li {
+  position: relative;
+
+  width: 100%;
+  min-height: 48px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 0 15px;
+
+  border-radius: 13px;
+
+  color: #a6a6a6;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.myfiles-sidebar li svg {
+  width: 17px;
+  min-width: 17px;
+}
+
+.myfiles-sidebar li:hover {
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color: #fff;
+
+  transform:
+    translateX(3px);
+}
+
+
+/* =========================================================
+   MY FILES ACTIVE
+========================================================= */
+
+.myfiles-sidebar li.active {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.04)
+    );
+
+  color: #fff;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    inset 3px 0 0 #fff;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.myfiles-sidebar-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    rgba(0, 0, 0, 0.65);
+
+  backdrop-filter: blur(3px);
+
+  z-index: 1150;
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.myfiles-menu-btn {
+  position: fixed;
+
+  top: 18px;
+  left: 18px;
+
+  width: 44px;
+  height: 44px;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 12px;
+
+  background:
+    rgba(15, 15, 15, 0.9);
+
+  color: #fff;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  z-index: 1150;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .myfiles-sidebar-trigger {
+    display: none;
+  }
+
+  .myfiles-menu-btn {
+    display: flex;
+  }
+
+  .myfiles-sidebar {
+    width: 285px;
+  }
+
+}
+/* =========================================================
+   TEACHER MY FILES SIDEBAR
+   MY FILES = FREE FEATURE
+========================================================= */
+
+.myfiles-sidebar-trigger {
+  position: fixed;
+
+  left: 0;
+  top: 50%;
+
+  width: 18px;
+  height: 100px;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1100;
+
+  cursor: pointer;
+}
+
+.myfiles-sidebar-hint {
+  width: 5px;
+  height: 55px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  transition: 0.25s ease;
+}
+
+.myfiles-sidebar-hint span {
+  width: 2px;
+  height: 2px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.myfiles-sidebar-trigger:hover
+.myfiles-sidebar-hint {
+  width: 8px;
+  height: 70px;
+
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.myfiles-sidebar {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  width: 270px;
+  height: 100vh;
+
+  box-sizing: border-box;
+
+  padding: 28px 16px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 20, 20, 0.98),
+      rgba(8, 8, 8, 0.99)
+    );
+
+  border-right:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    15px 0 50px rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  transform: translateX(-100%);
+
+  transition:
+    transform 0.35s ease;
+
+  z-index: 1200;
+
+  overflow-y: auto;
+}
+
+.myfiles-sidebar.myfiles-sidebar-open {
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.myfiles-sidebar-close {
+  position: absolute;
+
+  top: 18px;
+  right: 16px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  color: #aaa;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.myfiles-sidebar-close:hover {
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  color: #fff;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.myfiles-premium-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin:
+    5px 35px 35px 5px;
+
+  cursor: pointer;
+}
+
+.myfiles-logo-orb {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #a6a6a6
+    );
+
+  color: #050505;
+
+  font-size: 18px;
+}
+
+.myfiles-premium-logo h2 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 22px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.myfiles-sidebar ul {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.myfiles-sidebar li {
+  position: relative;
+
+  width: 100%;
+  min-height: 48px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 0 15px;
+
+  border-radius: 13px;
+
+  color: #a6a6a6;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.myfiles-sidebar li svg {
+  width: 17px;
+  min-width: 17px;
+}
+
+.myfiles-sidebar li:hover {
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color: #fff;
+
+  transform:
+    translateX(3px);
+}
+
+
+/* =========================================================
+   MY FILES ACTIVE
+========================================================= */
+
+.myfiles-sidebar li.active {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.04)
+    );
+
+  color: #fff;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    inset 3px 0 0 #ffffff;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.myfiles-sidebar-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    rgba(0, 0, 0, 0.65);
+
+  backdrop-filter: blur(3px);
+
+  z-index: 1150;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.myfiles-menu-btn {
+  position: fixed;
+
+  top: 18px;
+  left: 18px;
+
+  width: 44px;
+  height: 44px;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 12px;
+
+  background:
+    rgba(15, 15, 15, 0.9);
+
+  color: #fff;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  z-index: 1150;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .myfiles-sidebar-trigger {
+    display: none;
+  }
+
+  .myfiles-menu-btn {
+    display: flex;
+  }
+
+  .myfiles-sidebar {
+    width: 285px;
+  }
+
+}

@@ -1,0 +1,759 @@
+/* ==========================================
+   GIGANICS - TEACHER FREE MCQs
+========================================== */
+
+.teacher-mcqs-page {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 28px 42px 70px;
+
+  background:
+    radial-gradient(
+      circle at 85% 0%,
+      rgba(88, 101, 242, 0.14),
+      transparent 30%
+    ),
+    #090b10;
+
+  color: #ffffff;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.teacher-mcqs-header {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto 32px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.teacher-mcqs-back {
+  height: 42px;
+  padding: 0 15px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.teacher-mcqs-back:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(-2px);
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.teacher-mcqs-heading {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.teacher-mcqs-icon {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 14px;
+
+  background: rgba(88, 101, 242, 0.14);
+  border: 1px solid rgba(88, 101, 242, 0.25);
+
+  color: #8d98ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.teacher-mcqs-heading h1 {
+  margin: 0;
+
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.teacher-mcqs-heading p {
+  margin: 5px 0 0;
+
+  color: #858b98;
+  font-size: 14px;
+}
+
+/* ==========================================
+   TEACHER FREE BADGE
+========================================== */
+
+.teacher-free-badge {
+  padding: 8px 14px;
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #bfc3cc;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.teacher-mcqs-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   GENERATOR CARD
+========================================== */
+
+.teacher-mcqs-generator {
+  background: rgba(17, 20, 28, 0.94);
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 18px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================
+   GENERATOR TITLE
+========================================== */
+
+.generator-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 28px;
+}
+
+.generator-icon {
+  width: 43px;
+  height: 43px;
+
+  border-radius: 11px;
+
+  background: rgba(88, 101, 242, 0.13);
+  color: #8d98ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.generator-title h2 {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 650;
+}
+
+.generator-title p {
+  margin: 5px 0 0;
+
+  color: #858b98;
+  font-size: 13px;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.teacher-mcqs-form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 19px;
+}
+
+.mcq-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.mcq-field.full {
+  grid-column: 1 / -1;
+}
+
+.mcq-field label {
+  color: #d7d9df;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.mcq-field input,
+.mcq-field select {
+  width: 100%;
+  height: 47px;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: #0c0f15;
+
+  color: #ffffff;
+
+  padding: 0 14px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+.mcq-field input::placeholder {
+  color: #555b67;
+}
+
+.mcq-field input:focus,
+.mcq-field select:focus {
+  border-color: rgba(110, 123, 255, 0.7);
+
+  box-shadow:
+    0 0 0 3px rgba(88, 101, 242, 0.08);
+}
+
+.mcq-field select {
+  cursor: pointer;
+}
+
+.mcq-field select option {
+  background: #11141b;
+  color: #ffffff;
+}
+
+/* ==========================================
+   GENERATE BOTTOM
+========================================== */
+
+.generator-bottom {
+  margin-top: 27px;
+
+  padding-top: 22px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.06);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+/* ==========================================
+   USAGE
+========================================== */
+
+.usage {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.usage span {
+  color: #777e8b;
+  font-size: 12px;
+}
+
+.usage strong {
+  color: #dfe2e8;
+  font-size: 15px;
+}
+
+/* ==========================================
+   GENERATE BUTTON
+========================================== */
+
+.generate-button {
+  height: 47px;
+
+  padding: 0 24px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #5865f2;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.generate-button:hover:not(:disabled) {
+  background: #6975f5;
+
+  transform: translateY(-1px);
+}
+
+.generate-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   RESULT
+========================================== */
+
+.teacher-mcqs-result {
+  margin-top: 28px;
+}
+
+/* ==========================================
+   RESULT HEADER
+========================================== */
+
+.result-header {
+  background: rgba(17, 20, 28, 0.94);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.075);
+
+  border-radius: 16px 16px 0 0;
+
+  padding: 23px 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.result-header > div:first-child > span {
+  color: #8d98ff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.result-header h2 {
+  margin: 7px 0 0;
+
+  font-size: 21px;
+  font-weight: 650;
+}
+
+.result-header p {
+  margin: 7px 0 0;
+
+  color: #858b98;
+  font-size: 13px;
+}
+
+/* ==========================================
+   PDF BUTTON
+========================================== */
+
+.pdf-button {
+  height: 42px;
+
+  padding: 0 15px;
+
+  border-radius: 9px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  color: #969ca8;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.pdf-button:hover {
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color: #ffffff;
+}
+
+.pdf-button small {
+  color: #686e7b;
+}
+
+/* ==========================================
+   PAPER
+========================================== */
+
+.mcq-paper {
+  background: #ffffff;
+
+  color: #17191f;
+
+  border-radius:
+    0 0 16px 16px;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   PAPER HEADER
+========================================== */
+
+.paper-header {
+  padding: 25px 30px;
+
+  border-bottom:
+    1px solid #e8e8eb;
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.paper-header h3 {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.paper-header span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #777c86;
+
+  font-size: 12px;
+}
+
+.paper-details {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 5px;
+}
+
+.paper-details span {
+  color: #676c75;
+}
+
+/* ==========================================
+   PAPER TITLE
+========================================== */
+
+.paper-title {
+  padding:
+    25px 30px 8px;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.paper-title h2 {
+  margin: 0;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.paper-title span {
+  color: #777c86;
+
+  font-size: 12px;
+}
+
+/* ==========================================
+   MCQ CONTENT
+========================================== */
+
+.mcq-content {
+  padding:
+    10px 30px 40px;
+
+  line-height: 1.7;
+}
+
+/* QUESTION */
+
+.mcq-content h2 {
+  margin-top: 30px;
+
+  padding-top: 23px;
+
+  border-top:
+    1px solid #ededee;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* FIRST QUESTION */
+
+.mcq-content h2:first-child {
+  margin-top: 12px;
+
+  padding-top: 0;
+
+  border-top: none;
+}
+
+/* TEXT */
+
+.mcq-content p {
+  margin: 8px 0;
+
+  font-size: 14px;
+}
+
+.mcq-content strong {
+  font-weight: 700;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+
+  .teacher-mcqs-page {
+    padding:
+      20px;
+  }
+
+  .teacher-mcqs-header {
+    flex-wrap: wrap;
+  }
+
+  .teacher-mcqs-heading {
+    order: 3;
+
+    width: 100%;
+  }
+
+  .teacher-mcqs-form {
+    grid-template-columns: 1fr;
+  }
+
+  .mcq-field.full {
+    grid-column: auto;
+  }
+
+  .generator-bottom {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .generate-button {
+    width: 100%;
+  }
+
+  .result-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .paper-header,
+  .paper-title {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .paper-details {
+    align-items: flex-start;
+  }
+}
+/* ==========================================
+   TEACHER PREMIUM UPGRADE
+========================================== */
+
+.teacher-mcqs-upgrade {
+  margin-top: 30px;
+
+  padding: 24px 26px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(88, 101, 242, 0.13),
+      rgba(255, 255, 255, 0.035)
+    );
+
+  border:
+    1px solid rgba(88, 101, 242, 0.22);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.upgrade-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.upgrade-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background:
+    rgba(88, 101, 242, 0.16);
+
+  border:
+    1px solid rgba(88, 101, 242, 0.25);
+
+  color: #8d98ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+.upgrade-label {
+  color: #8d98ff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.upgrade-content h2 {
+  margin: 4px 0 5px;
+
+  font-size: 18px;
+}
+
+.upgrade-content p {
+  margin: 0;
+
+  color: #858b98;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.upgrade-button {
+  height: 44px;
+
+  padding: 0 19px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #5865f2;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+.upgrade-button:hover {
+  background: #6975f5;
+
+  transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+
+  .teacher-mcqs-upgrade {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .upgrade-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,717 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.subscription-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(52, 115, 255, 0.08),
+      transparent 35%
+    ),
+    #05070d;
+
+  color: white;
+
+  padding: 45px 6% 70px;
+
+  font-family: Arial, sans-serif;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.subscription-header {
+  max-width: 1200px;
+
+  margin: 0 auto 30px;
+
+  text-align: center;
+}
+
+
+.back-btn {
+  position: absolute;
+
+  left: 30px;
+  top: 30px;
+
+  border: 1px solid #243452;
+
+  background: #0d1729;
+
+  color: #b9c9e3;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition: 0.25s;
+}
+
+
+.back-btn:hover {
+  color: #fff;
+
+  border-color: #4da3ff;
+
+  background: #111f38;
+
+  transform: translateX(-2px);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.subscription-title {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 13px;
+
+  margin-bottom: 10px;
+}
+
+
+.title-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #172a55,
+      #151a3d
+    );
+
+  border: 1px solid #2a4e89;
+
+  color: #5ca7ff;
+
+  font-size: 20px;
+}
+
+
+.subscription-title h1 {
+  font-size: 34px;
+
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+}
+
+
+.subscription-header p {
+  color: #91a6c7;
+
+  font-size: 15px;
+
+  margin-top: 8px;
+}
+
+
+/* =========================================
+   CURRENT PLAN
+========================================= */
+
+.current-plan {
+  max-width: 1200px;
+
+  margin: 30px auto 35px;
+
+  min-height: 78px;
+
+  padding: 18px 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0e192d,
+      #0c1526
+    );
+
+  border: 1px solid #203454;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.18);
+}
+
+
+.current-plan > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.current-label {
+  color: #7191bd;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.current-plan strong {
+  font-size: 17px;
+
+  color: #fff;
+}
+
+
+.current-plan > svg {
+  color: #25d27a;
+
+  font-size: 23px;
+}
+
+
+/* =========================================
+   PLANS CONTAINER
+========================================= */
+
+.plans-container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 28px;
+
+  align-items: stretch;
+}
+
+
+/* Teacher has only 2 plans */
+
+.plans-container.teacher-layout {
+  grid-template-columns:
+    repeat(2, minmax(0, 420px));
+
+  justify-content: center;
+}
+
+
+/* =========================================
+   PLAN CARD
+========================================= */
+
+.plan-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  padding: 32px 28px 27px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #101b30,
+      #0b1425
+    );
+
+  border: 1px solid #203452;
+
+  border-radius: 24px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.plan-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #397fd8;
+
+  box-shadow:
+    0 20px 45px
+    rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   POPULAR CARD
+========================================= */
+
+.popular-card {
+  border-color: #3c83e9;
+
+  box-shadow:
+    0 0 35px
+    rgba(61, 131, 233, 0.08);
+}
+
+
+/* =========================================
+   BADGES
+========================================= */
+
+.popular-badge {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 10px 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #397ff0,
+      #2866d4
+    );
+
+  color: white;
+
+  border-radius: 25px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 20px
+    rgba(47, 116, 235, 0.25);
+}
+
+
+.popular-badge svg {
+  font-size: 12px;
+}
+
+
+.current-badge {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  background: rgba(24, 210, 119, 0.09);
+
+  border: 1px solid
+    rgba(24, 210, 119, 0.25);
+
+  color: #2bdd7e;
+
+  border-radius: 22px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.plan-icon {
+  width: 64px;
+  height: 64px;
+
+  margin: 5px auto 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #162b4d,
+      #16183d
+    );
+
+  border: 1px solid #284a7b;
+
+  color: #65aaff;
+
+  font-size: 28px;
+
+  transition: 0.3s;
+}
+
+
+.plan-card:hover .plan-icon {
+  transform: translateY(-3px) scale(1.04);
+
+  border-color: #4da3ff;
+
+  box-shadow:
+    0 10px 25px
+    rgba(77, 163, 255, 0.12);
+}
+
+
+/* =========================================
+   PLAN NAME
+========================================= */
+
+.plan-card h2 {
+  text-align: center;
+
+  color: #f5f8ff;
+
+  font-size: 25px;
+
+  font-weight: 750;
+
+  margin-bottom: 10px;
+}
+
+
+.plan-description {
+  min-height: 42px;
+
+  text-align: center;
+
+  color: #91a8c8;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.plan-price {
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-bottom: 20px;
+}
+
+
+.plan-price span {
+  color: #5ca7ff;
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+
+.plan-price small {
+  color: #91a6c7;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.plan-divider {
+  width: 100%;
+
+  height: 1px;
+
+  background: #1c2b45;
+
+  margin-bottom: 21px;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  margin-bottom: 28px;
+}
+
+
+.feature {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 11px;
+
+  color: #c8d7ed;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+}
+
+
+.feature svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+  color: #20d176;
+
+  font-size: 17px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.plan-button {
+  width: 100%;
+
+  min-height: 50px;
+
+  margin-top: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3177ed,
+      #4b8df5
+    );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+
+.plan-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(52, 122, 239, 0.3);
+}
+
+
+.plan-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   CURRENT BUTTON
+========================================= */
+
+.current-button {
+  background:
+    rgba(29, 210, 119, 0.08);
+
+  border: 1px solid
+    rgba(29, 210, 119, 0.28);
+
+  color: #2bdd7e;
+
+  cursor: default;
+}
+
+
+.current-button:hover {
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================
+   CURRENT CARD
+========================================= */
+
+.current-card {
+  border-color:
+    rgba(35, 210, 120, 0.35);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .plans-container {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .plans-container.teacher-layout {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .subscription-page {
+    padding: 30px 18px 50px;
+  }
+
+  .back-btn {
+    position: static;
+
+    margin-bottom: 25px;
+  }
+
+  .subscription-title h1 {
+    font-size: 27px;
+  }
+
+  .current-plan {
+    padding: 16px 18px;
+  }
+
+  .current-plan > div {
+    gap: 10px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .plans-container,
+  .plans-container.teacher-layout {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .plan-card {
+    padding: 27px 21px 23px;
+  }
+
+  .plan-price span {
+    font-size: 36px;
+  }
+
+  .popular-badge {
+    position: static;
+
+    width: fit-content;
+
+    margin: 0 auto 15px;
+  }
+
+  .current-badge {
+    position: static;
+
+    width: fit-content;
+
+    margin: 0 auto 15px;
+  }
+
+}
