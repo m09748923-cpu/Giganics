@@ -12,7 +12,12 @@ import MCQs from "./pages/MCQs";
 import Revision from "./pages/Revision";
 import Progress from "./pages/Progress";
 import PDFDownload from "./pages/PDFDownload";
-import ExamSimulator from "./ExamSimulator/ExamSimulator";
+
+// =========================
+// EXAM SIMULATOR TEMPORARILY DISABLED
+// =========================
+
+// import ExamSimulator from "./ExamSimulator/ExamSimulator";
 
 // =========================
 // AUTH
@@ -58,11 +63,9 @@ import TeacherMCQs from "./pages/TeacherMCQs";
 import TeacherFlashcards from "./pages/TeacherFlashcards";
 import TeacherAnswerKey from "./pages/TeacherAnswerKey";
 
-
 function App() {
   return (
     <BrowserRouter basename="/Giganics">
-
       <Routes>
 
         {/* ==================================================
@@ -89,11 +92,16 @@ function App() {
           element={<PDFDownload />}
         />
 
+        {/* ==================================================
+            EXAM SIMULATOR TEMPORARILY DISABLED
+        ================================================== */}
+
+        {/*
         <Route
           path="/exam-simulator"
           element={<ExamSimulator />}
         />
-
+        */}
 
         {/* ==================================================
             AUTHENTICATION
@@ -114,7 +122,6 @@ function App() {
           element={<ForgotPassword />}
         />
 
-
         {/* ==================================================
             SUBSCRIPTION
         ================================================== */}
@@ -123,7 +130,6 @@ function App() {
           path="/subscription-plans"
           element={<SubscriptionPlans />}
         />
-
 
         {/* ==================================================
             STUDENT
@@ -143,7 +149,6 @@ function App() {
           path="/student-premium-dashboard"
           element={<StudentPremiumDashboard />}
         />
-
 
         {/* ==================================================
             STUDENT AI TOOLS
@@ -179,7 +184,6 @@ function App() {
           element={<Progress />}
         />
 
-
         {/* ==================================================
             TEACHER FREE DASHBOARD
         ================================================== */}
@@ -188,7 +192,6 @@ function App() {
           path="/teacher-dashboard"
           element={<TeacherDashboard />}
         />
-
 
         {/* ==================================================
             TEACHER PREMIUM DASHBOARD
@@ -199,60 +202,39 @@ function App() {
           element={<TeacherPremiumDashboard />}
         />
 
-
         {/* ==================================================
             TEACHER AI TOOLS
         ================================================== */}
-
-        {/* AI NOTES */}
 
         <Route
           path="/teacher-ai-notes"
           element={<TeacherAINotes />}
         />
 
-
-        {/* HOMEWORK */}
-
         <Route
           path="/teacher-homework"
           element={<TeacherHomework />}
         />
-
-
-        {/* CLASSWORK */}
 
         <Route
           path="/teacher-classwork"
           element={<TeacherClasswork />}
         />
 
-
-        {/* TEST PAPER */}
-
         <Route
           path="/teacher-test-paper"
           element={<TeacherTestPaper />}
         />
-
-
-        {/* MCQs */}
 
         <Route
           path="/teacher-mcqs"
           element={<TeacherMCQs />}
         />
 
-
-        {/* FLASHCARDS */}
-
         <Route
           path="/teacher-flashcards"
           element={<TeacherFlashcards />}
         />
-
-
-        {/* ANSWER KEY */}
 
         <Route
           path="/teacher-answer-key"
@@ -260,7 +242,6 @@ function App() {
         />
 
       </Routes>
-
     </BrowserRouter>
   );
 }
